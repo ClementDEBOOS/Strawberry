@@ -5,7 +5,7 @@ function init() {
     // Basic options for a simple Google Map
     // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
     // var myLatlng = new google.maps.LatLng(40.71751, -73.990922);
-    var myLatlng = new google.maps.LatLng(51.0825523,3.574402,11);
+    var myLatlng = new google.maps.LatLng(48.348207,-4.367648,11);
     // 39.399872
     // -8.224454
     
@@ -30,7 +30,7 @@ function init() {
     // Create the Google Map using out element and options defined above
     var map = new google.maps.Map(mapElement, mapOptions);
     
-    var addresses = ['Ghent'];
+    var addresses = ['saint trémeur'];
 
     for (var x = 0; x < addresses.length; x++) {
         $.getJSON('//maps.googleapis.com/maps/api/geocode/json?address='+addresses[x]+'&sensor=false', null, function (data) {
@@ -39,7 +39,7 @@ function init() {
             new google.maps.Marker({
                 position: latlng,
                 map: map,
-                icon: 'images/loc.png'
+                icon: 'images/strawberry.png'
             });
 
         });
